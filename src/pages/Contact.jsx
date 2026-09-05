@@ -59,7 +59,7 @@ const Contact = () => {
       <div className=" absolute w-full object-cover">
         <video
           src={ContactBack}
-          className="w-[120%] h-206 object-cover blur-[1.5px]"
+          className="w-[120%] h-screen object-cover blur-[1.5px]"
           autoPlay
           muted
           loop

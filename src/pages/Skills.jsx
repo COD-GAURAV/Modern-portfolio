@@ -1,4 +1,4 @@
-import { FaHtml5 } from "react-icons/fa";
+import { FaHtml5, FaJs } from "react-icons/fa";
 import { FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -19,6 +19,9 @@ import githubBg1 from "../video/githubBg.mp4";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Skills = () => {
+
+  const mm = gsap.matchMedia()
+
   useGSAP(() => {
     gsap.to(".SkillHead", {
       opacity: 1,
@@ -31,8 +34,9 @@ const Skills = () => {
       },
     });
 
-    gsap.to(".sectionSkill", {
-      translateX: "-1000",
+    mm.add("(min-width: 600px)",()=>{
+     gsap.to(".sectionSkill", {
+      translateX: "-50%",
       delay: 3,
       scrollTrigger: {
         trigger: "#Skills",
@@ -42,6 +46,9 @@ const Skills = () => {
         pin: true,
       },
     });
+    })
+
+   
   });
 
   return (
@@ -65,7 +72,7 @@ const Skills = () => {
           <div className="flex gap-10 sectionSkill">
             <div className=" w-full flex gap-10    text-white ">
               <div className=" flex flex-col gap-5 bg-white/10 justify-between h-108 w-90  rounded-2xl">
-                <div className=" w-full rounded-2xl">
+                <div className=" w-full rounded-2xl ">
                   <video
                     className=" w-full h-[67.5%] object-cover rounded-2xl relative z-30 "
                     src={htmlVideo3}
@@ -304,6 +311,7 @@ const Skills = () => {
             </div>
           </div>
         </div>
+        
       </div>
     </>
   );
