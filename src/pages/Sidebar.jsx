@@ -163,7 +163,7 @@ const Sidebar = () => {
             <IoLogoJavascript className=" text-[#F0DB4F]"/>
             <h3 className="text-white">JAVASCRIPT</h3>
           </div>
-          <div className=" flex justify-center items-center gap-2">
+          <div className=" flex justify-center items-center gap-2 ">
             <RiTailwindCssFill className="text-[#38BDF8]"/>
             <h3 className="text-white">TAILWIND CSS</h3>
           </div>
