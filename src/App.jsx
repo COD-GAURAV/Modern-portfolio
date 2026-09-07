@@ -20,7 +20,7 @@ const App = ()=>{
 
 
 
-    <div className="">
+    <div className=" overflow-x-hidden">
 
     <Routes>
       <Route path="Modern-portfolio/" element={<Home ScrollToThis = {setPages}/>}/>
