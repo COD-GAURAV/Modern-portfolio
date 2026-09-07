@@ -68,7 +68,7 @@ const Skills = () => {
             Technologies I Use to Build Modern Web Experiences.
           </p>
         </div>
-        <div className=" w-full flex overflow-x-auto overflow-y-hidden opacity-0  sm:overflow-hidden justify-around mt-10 px-15 gap-10 text-4xl skillLift SkillHead">
+        <div className=" w-full flex overflow-y-hidden opacity-0  sm:overflow-hidden justify-around mt-10 px-15 gap-10 text-4xl skillLift SkillHead">
           <div className="flex gap-10 sectionSkill">
             <div className=" w-full flex gap-10    text-white ">
               <div className=" flex flex-col gap-5 bg-white/10 justify-between h-108 w-90  rounded-2xl">
