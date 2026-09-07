@@ -33,7 +33,7 @@ const Skills = () => {
         scrub: "2",
       },
     });
-
+    
     mm.add("(min-width: 600px)",()=>{
      gsap.to(".sectionSkill", {
       translateX: "-50%",
@@ -53,10 +53,10 @@ const Skills = () => {
 
   return (
     <>
-      <div className="w-full h-screen p-5 sm:pl-70 sm:pt-10 skill" id="Skills">
+      <div className="w-full h-screen p-5 pl-70 pt-10 skill" id="Skills">
         <div>
-          <h3 className=" px-2 py-1 w-fit opacity-0 text-[15px] mt-5 mb-2 sm:mb-0 text-[#ffff23] bg-white/10 rounded-2xl border SkillHead">
-            Start small grow big
+          <h3 className=" px-2 py-1 w-fit opacity-0 text-[15px] mt-5 mb-2 text-[#ffff23] bg-white/10 rounded-2xl border SkillHead">
+            Start Small grow big
           </h3>
           <h1 className=" text-[15vw] sm:text-[6vw] opacity-0 text-[#ffff23] font-bold SkillHead">
             My Skills
@@ -68,10 +68,10 @@ const Skills = () => {
             Technologies I Use to Build Modern Web Experiences.
           </p>
         </div>
-        <div className=" w-full flex overflow-y-hidden opacity-0 overflow-hidden justify-around mt-10 px-15 gap-10 text-4xl skillLift SkillHead">
+        <div className=" w-full flex  opacity-0 sm:overflow-hidden justify-around mt-10 px-15 gap-10 text-4xl skillLift SkillHead">
           <div className="flex gap-10 sectionSkill">
-            <div className=" w-full flex gap-10    text-white ">
-              <div className=" flex flex-col gap-5 bg-white/10 justify-between h-108 w-90  rounded-2xl">
+            <div className=" w-full flex gap-10  overflow-x-auto  overflow-hidden text-white ">
+              <div className=" flex flex-col gap-5 overflow-hidden bg-white/10 justify-between h-108 w-90  rounded-2xl">
                 <div className=" w-full rounded-2xl ">
                   <video
                     className=" w-full h-[67.5%] object-cover rounded-2xl relative z-30 "
@@ -91,9 +91,9 @@ const Skills = () => {
                     HTML
                   </h3>
                 </div>
-                <div className="flex flex-col gap-5 w-[14%] pl-5 bottom-25 sm:bottom-30 absolute z-50 ">
+                <div className="flex flex-col gap-5 w-[14%] pl-5 bottom-25  absolute z-50 ">
                   <div className="absolute">
-                    <p className=" text-[17px] sm:text-[1vw]">
+                    <p className=" text-[17px] ">
                       HTML: HyperText Markup Language. is the most basic building block of the Web.
                     </p>
                   </div>
@@ -129,7 +129,7 @@ const Skills = () => {
                 </div>
                 <div className="flex flex-col gap-5 w-[14%] pl-5 bottom-30 absolute z-50 ">
                   <div className="absolute">
-                    <p className="text-[17px] sm:text-[1vw]">
+                    <p className="text-[17px] ">
                       CSS (Cascading Style Sheets) is used to style and design
                       web pages. It controls colors, fonts, spacing, layouts,
                       and animations.
@@ -169,7 +169,7 @@ const Skills = () => {
                 </div>
                 <div className="flex flex-col gap-5 w-[14%] pl-5 bottom-36 absolute z-50 ">
                   <div className="absolute">
-                    <p className="text-[17px] sm:text-[1vw]">
+                    <p className="text-[17px] ">
                       JavaScript is a programming language that adds
                       interactivity to websites. It allows developers to create
                       dynamic content, animations, and user interactions.
@@ -211,7 +211,7 @@ const Skills = () => {
                 </div>
                 <div className="flex flex-col gap-5 w-[14%] pl-5 bottom-36 absolute z-50 ">
                   <div className="absolute">
-                    <p className="text-[17px] sm:text-[1vw]">
+                    <p className="text-[17px] ">
                       Tailwind CSS is a utility-first CSS framework for building
                       modern user interfaces. It provides pre-built utility
                       classes for fast and efficient styling.
@@ -251,7 +251,7 @@ const Skills = () => {
                 </div>
                 <div className="flex flex-col gap-5 w-[14%] pl-5 bottom-36 absolute z-50 ">
                   <div className="absolute">
-                    <p className="text-[17px] sm:text-[1vw]">
+                    <p className="text-[17px] ">
                       React is a JavaScript library for building interactive
                       user interfaces. It uses reusable components to create
                       scalable and maintainable applications.
@@ -290,7 +290,7 @@ const Skills = () => {
                 </div>
                 <div className="flex flex-col gap-5 w-[14%] pl-5 bottom-36 absolute z-50 ">
                   <div className="absolute">
-                    <p className="text-[17px] sm:text-[1vw]">
+                    <p className="text-[17px] ">
                       GitHub is a cloud-based platform for hosting Git
                       repositories. It enables developers to collaborate, review
                       code, and manage projects online.

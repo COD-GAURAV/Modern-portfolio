@@ -58,7 +58,7 @@ const Sidebar = () => {
   })
 
   return (
-    <div className=" fixed left-2 translate-x-[-120%] z-30  flex flex-col justify-between gap-5 top-3 scrollSide">
+    <div className=" hidden sm:fixed left-2 translate-x-[-120%] z-30  sm:flex flex-col justify-between gap-5 top-3 scrollSide">
       <div className=" h-45 w-60 bg-black/20 p-2 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex flex-col justify-between">
         <div className="flex justify-between p-3">
           <h1 className="bg-[#ffff24] px-2 py-0.5 rounded-lg font-bold headingSide">
