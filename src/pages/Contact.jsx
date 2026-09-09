@@ -66,7 +66,7 @@ const Contact = () => {
           playsInline
         ></video>
       </div>
-      <div className="w-full sm:h-screen p-5 sm:pl-70 sm:pt-10 contact" id="Contact">
+      <div className=" w-full sm:h-screen p-5 sm:pl-70 sm:pt-10 contact" id="Contact">
         <div className="">
           <h1 className=" sm:mt-0 text-[15vw] sm:text-[5vw] font-bold relative z-30 text-[#ffff23]">
             Contact Us

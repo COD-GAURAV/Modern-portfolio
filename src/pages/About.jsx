@@ -21,20 +21,20 @@ const About = () => {
   });
 
   return (
-    <div className=" h-screen w-full aboutSection relative bg-[#d6d0bf] p-5 pl-75  about">
+    <div className=" h-screen w-full aboutSection relative bg-[#d6d0bf] p-5 sm:pl-75  about">
       <div className=" mb-5">
-        <h3 className=" border-2 w-fit px-2 py-1 rounded-full text-[12px]  text-black font-semibold">
+        <h3 className=" border-2 w-fit px-2 py-1 rounded-full sm:text-[12px]  text-black font-semibold">
           Start Small grow big
         </h3>
       </div>
       <div>
-        <h1 className="text-[40px] text-8xl  font-semibold text-[#ffff24]">
+        <h1 className=" text-5xl sm:text-8xl  font-semibold text-[#ffff24]">
           {" "}
           About Me <br />
           And My Goals
         </h1>
       </div>
-      <div className=" text-[17px]  mt-5 flex flex-wrap gap-2">
+      <div className=" sm:text-[2.3vw]  mt-5 flex flex-wrap gap-2">
         <span className="aboutPara opacity-20 ">I</span>
         <span className="aboutPara opacity-20">am</span>
         <span className="aboutPara opacity-20">Gaurav</span>
