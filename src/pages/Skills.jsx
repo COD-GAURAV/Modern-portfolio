@@ -58,17 +58,17 @@ const Skills = () => {
           <h3 className=" px-2 py-1 w-fit opacity-0 text-[15px] mt-5 mb-2 text-[#ffff23] bg-white/10 rounded-2xl border SkillHead">
             Start Small grow big
           </h3>
-          <h1 className=" text-[15vw] sm:text-[6vw] opacity-0 text-[#ffff23] font-bold SkillHead">
+          <h1 className=" text-[6vw] opacity-0 text-[#ffff23] font-bold SkillHead">
             My Skills
           </h1>
           i
         </div>
         <div className=" w-[90%]">
-          <p className="text-[20px]  sm:text-[44px] opacity-0 text-white SkillHead">
+          <p className="  text-[44px] opacity-0 text-white SkillHead">
             Technologies I Use to Build Modern Web Experiences.
           </p>
         </div>
-        <div className=" w-full flex  opacity-0 sm:overflow-hidden justify-around mt-10 px-15 gap-10 text-4xl skillLift SkillHead">
+        <div className=" w-full flex  opacity-0 overflow-hidden justify-around mt-10 px-15 gap-10 text-4xl skillLift SkillHead">
           <div className="flex gap-10 sectionSkill">
             <div className=" w-full flex gap-10  overflow-x-auto  overflow-hidden text-white ">
               <div className=" flex flex-col gap-5 overflow-hidden bg-white/10 justify-between h-108 w-90  rounded-2xl">
