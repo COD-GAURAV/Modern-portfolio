@@ -34,18 +34,18 @@ const Skills = () => {
       },
     });
     
+    gsap.to(".sectionSkill", {
+     translateX: "-50%",
+     delay: 3,
+     scrollTrigger: {
+       trigger: "#Skills",
+       start: "top 0%",
+       end: "bottom -100%",
+       scrub: 2,
+       pin: true,
+     },
+   });
     mm.add("(min-width: 600px)",()=>{
-     gsap.to(".sectionSkill", {
-      translateX: "-50%",
-      delay: 3,
-      scrollTrigger: {
-        trigger: "#Skills",
-        start: "top 0%",
-        end: "bottom -100%",
-        scrub: 2,
-        pin: true,
-      },
-    });
     })
 
    
