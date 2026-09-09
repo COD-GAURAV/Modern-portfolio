@@ -16,9 +16,16 @@ gsap.registerPlugin(useGSAP,ScrollTrigger)
 
 const Home = () => {
 
+  const menu = ()=>{
+    console.log("hello")
+      gsap.to(".scrollSide",{
+       translateX:"0%",
+     })
+  }
+  
   useGSAP(()=>{
     const tl = gsap.timeline()
-
+    
     const mm = gsap.matchMedia();
 
     mm.add("((min-width: 600px)",()=>{
@@ -179,7 +186,10 @@ const Home = () => {
       </div>
       <div className='flex gap-7 justify-center items-center '>
         <div className=' text-5xl fixed'>
+          <span onClick={menu}>
           <IoMenu />
+
+          </span>
           
         </div>
       </div>

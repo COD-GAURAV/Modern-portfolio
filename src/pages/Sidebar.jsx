@@ -14,6 +14,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaReact } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { MdOutlineClose } from "react-icons/md";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/all'
@@ -25,6 +26,13 @@ const Sidebar = () => {
     navigator.clipboard.writeText("yash35981@gmail.com");
   };
 
+  const close = ()=>{
+     gsap.to(".scrollSide",{
+         translateX:"-120%",
+         duration:1
+       })
+  }
+
   useGSAP(()=>{
 
     const mm = gsap.matchMedia();
@@ -33,24 +41,24 @@ const Sidebar = () => {
 
     })
 
+    
+    gsap.to(".gsapHtml",{
+     translateX:"-120%",
+     duration:10,
+     ease:"none",
+     repeat:-1
+   })
     mm.add("(min-width: 600px)", ()=>{
-     gsap.to(".gsapHtml",{
-      translateX:"-120%",
-      duration:10,
-      ease:"none",
-      repeat:-1
-    })
-
-    gsap.to(".scrollSide",{
-      translateX:"0%",
-      scrollTrigger:{
-        trigger:".homeSection",
-        start:"top 0%",
-        end:"bottom -100%",
-        scrub:2,
-        pin:true
-      }
-    })
+       gsap.to(".scrollSide",{
+         translateX:"0%",
+         scrollTrigger:{
+           trigger:".homeSection",
+           start:"top 0%",
+           end:"bottom -100%",
+           scrub:2,
+           pin:true
+         }
+       })
     })
 
 
@@ -58,8 +66,9 @@ const Sidebar = () => {
   })
 
   return (
-    <div className=" hidden sm:fixed left-2 translate-x-[-120%] z-30  sm:flex flex-col justify-between gap-5 top-3 scrollSide">
-      <div className=" h-45 w-60 bg-black/20 p-2 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex flex-col justify-between">
+    <>
+    <div className="fixed left-2 translate-x-[-120%] z-30  sm:flex flex-col justify-between gap-5 top-2 sm:top-3 border-black/80 sm:border-none backdrop-blur-2xl sm:backdrop:blur-none shadow-xl sm:shadow-none rounded-xl scrollSide ">
+      <div className="hidden h-45 w-60 bg-black/20 p-2 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl sm:flex flex-col justify-between">
         <div className="flex justify-between p-3">
           <h1 className="bg-[#ffff24] px-2 py-0.5 rounded-lg font-bold headingSide">
             GAURAV
@@ -77,7 +86,7 @@ const Sidebar = () => {
           </p>
         </div>
       </div>
-      <div className=" h-30 w-60 bg-black/20 p-3 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex items-center justify-center gap-4">
+      <div className="hidden h-30 w-60 bg-black/20 p-3 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl sm:flex items-center mb-3.5 justify-center gap-4">
         <div className=" flex flex-col justify-center items-center">
           <div className="text-5xl text-[#ffff24]">
             <SiPolymerproject />
@@ -97,25 +106,25 @@ const Sidebar = () => {
           </h3>
         </div>
       </div>
-      <div className=" h-45 w-60 bg-black/20 p-3 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex flex-col justify-center text-white gap-2">
-        <div className="bg-black/30  px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl w-fit flex items-center gap-2 ">
+      <div className=" h-45 w-[96vw] sm:w-60 bg-black/20 p-3 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex flex-col justify-center text-white gap-2">
+        <div className="bg-black/30 w-[99%] px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl sm:w-fit flex justify-center items-center gap-2 ">
           <AiFillHome />
           <h3 className="font-bold text-white">HOME</h3>
         </div>
-        <div className="bg-black/30  px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl w-fit flex items-center gap-2">
+        <div className="bg-black/30 w-[99%] px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl sm:w-fit flex justify-center items-center gap-2">
           <DiEnvato />
           <h3 className="font-bold text-white">ABOUT</h3>
         </div>
-        <div className="bg-black/30  px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl w-fit flex items-center gap-2">
+        <div className="bg-black/30 w-[99%] px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl sm:w-fit flex justify-center items-center gap-2">
           <GiFire />
           <h3 className="font-bold text-white">SKILLS</h3>
         </div>
-        <div className="bg-black/30 px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex items-center w-fit gap-2">
+        <div className="bg-black/30 w-[99%] px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex justify-center items-center sm:w-fit gap-2">
           <IoCallSharp />
           <h3 className="font-bold text-white">CONTACT US</h3>
         </div>
       </div>
-      <div className=" h-10 w-60 bg-black/20  border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex  justify-center items-center">
+      <div className=" h-10 w-[96vw] sm:w-60 bg-black/20  border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex mt-2.5  justify-center items-center">
         <div className=" h-[50%] w-[90%] bg-black/60  border-white/80 backdrop-blur-2xl shadow-xl rounded-xl flex  justify-center items-center gap-4">
           <h3 className="text-white text-[12px]">yash35981@gmail.com</h3>
           <span className="text-white text-[12px]" onClick={CopyText}>
@@ -123,7 +132,7 @@ const Sidebar = () => {
           </span>
         </div>
       </div>
-      <div className=" h-10 w-60 bg-black/20 gap-5 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex  justify-center items-center overflow-x-hidden">
+      <div className=" h-10 w-[96vw] sm:w-60 bg-black/20 gap-5 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex mt-2.5  justify-center items-center overflow-x-hidden">
         <div className="flex justify-center items-center  whitespace-nowrap gap-5 translate-x-200 gsapHtml">
           <div className=" flex justify-center items-center gap-2">
             <FaHtml5 className="text-[#F54927]"/>
@@ -178,6 +187,12 @@ const Sidebar = () => {
         </div>
       </div>
     </div>
+     <div className=" absolute bottom-82 translate-x-[-120%] w-full flex sm:hidden justify-center items-center mt-2.5 scrollSide">
+        <span className="p-2 text-2xl rounded-full bg-black/60 text-[#ffff24] font-extrabold" onClick={close}>
+          <MdOutlineClose />
+        </span>
+      </div>
+    </>
   );
 };
 
