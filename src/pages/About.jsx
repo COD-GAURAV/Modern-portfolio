@@ -21,14 +21,14 @@ const About = () => {
   });
 
   return (
-    <div className=" h-screen w-full aboutSection relative bg-[#d6d0bf] p-5 sm:pl-75  about">
+    <div className=" h-screen w-full aboutSection relative bg-[#d6d0bf] p-5 pl-75  about">
       <div className=" mb-5">
-        <h3 className=" border-2 w-fit px-2 py-1 rounded-full sm:text-[12px]  text-black font-semibold">
+        <h3 className=" border-2 w-fit px-2 py-1 rounded-full text-[12px]  text-black font-semibold">
           Start Small grow big
         </h3>
       </div>
       <div>
-        <h1 className="text-[40px] sm:text-8xl  font-semibold text-[#ffff24]">
+        <h1 className="text-[40px] text-8xl  font-semibold text-[#ffff24]">
           {" "}
           About Me <br />
           And My Goals
