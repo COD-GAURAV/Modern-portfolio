@@ -34,7 +34,7 @@ const Skills = () => {
     });
     
     gsap.to(".sectionSkill", {
-     translateX: "-70%",
+     translateX: "-90%",
      delay: 3,
      scrollTrigger: {
        trigger: "#Skills",
