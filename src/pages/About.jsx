@@ -24,7 +24,7 @@ const About = () => {
     <div className=" h-screen w-full aboutSection relative bg-[#d6d0bf] p-5 sm:pl-75  about">
       <div className=" mb-5">
         <h3 className=" border-2 w-fit px-2 py-1 rounded-full sm:text-[12px]  text-black font-semibold">
-          Start ll grow big
+          Start Small grow big
         </h3>
       </div>
       <div>
