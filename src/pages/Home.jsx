@@ -186,7 +186,7 @@ const Home = () => {
         </div>
 
     </div>
-        <div className='hidden sm:fixed top-0 translate-x-[-90%]   w-full  text-center font-bold buildText p-10'>
+        <div className='fixed top-0 translate-x-[-90%]   w-full  text-center font-bold buildText p-10'>
           <h3 className=' text-[12vw] leading-60 text-black'>BUILD BY GAURAV KUMAR</h3>
         </div>
     </>

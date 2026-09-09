@@ -20,7 +20,6 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Skills = () => {
 
-  const mm = gsap.matchMedia()
 
   useGSAP(() => {
     gsap.to(".SkillHead", {
@@ -35,7 +34,7 @@ const Skills = () => {
     });
     
     gsap.to(".sectionSkill", {
-     translateX: "-50%",
+     translateX: "-70%",
      delay: 3,
      scrollTrigger: {
        trigger: "#Skills",
@@ -45,8 +44,6 @@ const Skills = () => {
        pin: true,
      },
    });
-    mm.add("(min-width: 600px)",()=>{
-    })
 
    
   });
