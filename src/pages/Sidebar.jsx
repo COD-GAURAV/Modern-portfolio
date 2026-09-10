@@ -31,39 +31,76 @@ const Sidebar = () => {
  const closeBar = useRef()
   const HomeNavigator = ()=>{
    
-    gsap.to(window,{
-      scrollTo:".page1",
-      duration:2
-    })
-    closeBar.current.click()
+   if (window.innerWidth < 600) {
+      gsap.to(window,{
+       scrollTo:".page1",
+       duration:2
+     })
+     closeBar.current.click()
+      
+    }
+    else{
+        gsap.to(window,{
+       scrollTo:".page1",
+       duration:2
+     })
+    }
 
   }
   const aboutNavigator = ()=>{
 
     console.log(window.innerWidth)
  
-    
-     gsap.to(window,{
-      scrollTo:".page2",
-      duration:2
-    })
-    closeBar.current.click()
+    if (window.innerWidth < 600) {
+      gsap.to(window,{
+       scrollTo:".page2",
+       duration:2
+     })
+     closeBar.current.click()
+      
+    }
+    else{
+        gsap.to(window,{
+       scrollTo:".page2",
+       duration:2
+     })
+    }
 
   }
   const skillNavigator = ()=>{
-     gsap.to(window,{
-      scrollTo:".page3",
-      duration:2
-    })
-    closeBar.current.click()
+     if (window.innerWidth < 600) {
+      gsap.to(window,{
+       scrollTo:".page3",
+       duration:2
+     })
+     closeBar.current.click()
+      
+    }
+    else{
+        gsap.to(window,{
+       scrollTo:".page3",
+       duration:2
+     })
+    }
+  
 
   }
   const contactNavigator = ()=>{
-    gsap.to(window,{
-      scrollTo:".page4",
-      duration:2
-    })
-    closeBar.current.click()
+     if (window.innerWidth < 600) {
+      gsap.to(window,{
+       scrollTo:".page4",
+       duration:2
+     })
+     closeBar.current.click()
+      
+    }
+    else{
+        gsap.to(window,{
+       scrollTo:".page4",
+       duration:2
+     })
+    }
+  
 
   }
   const close = ()=>{
