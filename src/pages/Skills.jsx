@@ -50,6 +50,9 @@ const Skills = () => {
 
   return (
     <>
+    <div className="page3">
+
+    </div>
       <div className="w-full h-screen p-5 sm:pl-70 pt-10 skill" id="Skills">
         <div>
           <h3 className=" px-2 py-1 w-fit opacity-0 text-[15px] mt-5 mb-2 text-[#ffff23] bg-white/10 rounded-2xl border SkillHead">

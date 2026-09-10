@@ -22,6 +22,31 @@ const Home = () => {
        translateX:"0%",
      })
   }
+  const HomeNavigator = ()=>{
+   
+    gsap.to(window,{
+      scrollTo:".page1",
+      duration:2
+    })
+  }
+  const aboutNavigator = ()=>{
+    gsap.to(window,{
+      scrollTo:".page2",
+      duration:2
+    })
+  }
+  const skillNavigator = ()=>{
+     gsap.to(window,{
+      scrollTo:".page3",
+      duration:2
+    })
+  }
+  const contactNavigator = ()=>{
+    gsap.to(window,{
+      scrollTo:".page4",
+      duration:2
+    })
+  }
   
   useGSAP(()=>{
     const tl = gsap.timeline()
@@ -95,6 +120,7 @@ const Home = () => {
 
   return (
     <>
+    <div className='page1'></div>
     <div className=' h-screen w-full bg-[#d6d0bf] homeSection'>
       <div className='h-full w-full homePages'>
         <div className=''>
@@ -106,12 +132,12 @@ const Home = () => {
 
       <div className=' hidden sm:flex w-full justify-between px-23 mt-30 creativeP'>
         <div className='flex gap-20 font-semibold text-[25px]'>
-          <h1 className=' cursor-pointer' onClick={()=> console.log("hello")}>HOME</h1>
-          <h1 className=' cursor-pointer' onClick={()=> console.log("hello")}>ABOUT</h1>
+          <h1 className=' cursor-pointer' onClick={HomeNavigator}>HOME</h1>
+          <h1 className=' cursor-pointer' onClick={aboutNavigator}>ABOUT</h1>
         </div>
         <div className='flex gap-20 font-semibold text-[25px]'>
-          <h1 className=' cursor-pointer' onClick={()=> console.log("hello")}>SKILLS</h1>
-          <h1 className=' cursor-pointer' onClick={()=> console.log("hello")}>CONTACT US</h1>
+          <h1 className=' cursor-pointer' onClick={skillNavigator}>SKILLS</h1>
+          <h1 className=' cursor-pointer' onClick={contactNavigator}>CONTACT US</h1>
         </div>
       </div>
 

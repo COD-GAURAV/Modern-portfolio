@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillHome } from "react-icons/ai";
@@ -18,14 +18,54 @@ import { MdOutlineClose } from "react-icons/md";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/all'
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(useGSAP , ScrollTrigger)
+
+gsap.registerPlugin(useGSAP , ScrollTrigger ,ScrollToPlugin)
 
 const Sidebar = () => {
   const CopyText = () => {
     navigator.clipboard.writeText("yash35981@gmail.com");
   };
 
+ const closeBar = useRef()
+  const HomeNavigator = ()=>{
+   
+    gsap.to(window,{
+      scrollTo:".page1",
+      duration:2
+    })
+    closeBar.current.click()
+
+  }
+  const aboutNavigator = ()=>{
+
+    console.log(window.innerWidth)
+ 
+    
+     gsap.to(window,{
+      scrollTo:".page2",
+      duration:2
+    })
+    closeBar.current.click()
+
+  }
+  const skillNavigator = ()=>{
+     gsap.to(window,{
+      scrollTo:".page3",
+      duration:2
+    })
+    closeBar.current.click()
+
+  }
+  const contactNavigator = ()=>{
+    gsap.to(window,{
+      scrollTo:".page4",
+      duration:2
+    })
+    closeBar.current.click()
+
+  }
   const close = ()=>{
      gsap.to(".scrollSide",{
          translateX:"-120%",
@@ -67,7 +107,7 @@ const Sidebar = () => {
 
   return (
     <>
-    <div className="fixed left-2 translate-x-[-120%] z-30  sm:flex flex-col justify-between gap-5 top-2 sm:top-3 border-black/80 sm:border-none backdrop-blur-2xl sm:backdrop:blur-none shadow-xl sm:shadow-none rounded-xl scrollSide ">
+    <div className="fixed left-2 translate-x-[-120%] z-50  sm:flex flex-col justify-between gap-5 top-2 sm:top-3 bg-black/20 border-black/80 sm:border-none backdrop-blur-2xl sm:backdrop:blur-none shadow-xl sm:shadow-none rounded-xl scrollSide ">
       <div className="hidden h-45 w-60 bg-black/20 p-2 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl sm:flex flex-col justify-between">
         <div className="flex justify-between p-3">
           <h1 className="bg-[#ffff24] px-2 py-0.5 rounded-lg font-bold headingSide">
@@ -107,19 +147,19 @@ const Sidebar = () => {
         </div>
       </div>
       <div className=" h-45 w-[96vw] sm:w-60 bg-black/20 p-3 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex flex-col justify-center text-white gap-2">
-        <div className="bg-black/30 w-[99%] px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl sm:w-fit flex justify-center items-center gap-2 ">
+        <div className="bg-black/30 w-[99%] px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl sm:w-fit flex justify-center items-center gap-2" onClick={HomeNavigator}>
           <AiFillHome />
           <h3 className="font-bold text-white">HOME</h3>
         </div>
-        <div className="bg-black/30 w-[99%] px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl sm:w-fit flex justify-center items-center gap-2">
+        <div className="bg-black/30 w-[99%] px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl sm:w-fit flex justify-center items-center gap-2" onClick={aboutNavigator} >
           <DiEnvato />
           <h3 className="font-bold text-white">ABOUT</h3>
         </div>
-        <div className="bg-black/30 w-[99%] px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl sm:w-fit flex justify-center items-center gap-2">
+        <div className="bg-black/30 w-[99%] px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl sm:w-fit flex justify-center items-center gap-2" onClick={skillNavigator}>
           <GiFire />
           <h3 className="font-bold text-white">SKILLS</h3>
         </div>
-        <div className="bg-black/30 w-[99%] px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex justify-center items-center sm:w-fit gap-2">
+        <div className="bg-black/30 w-[99%] px-5 py-1 border-black/80 backdrop-blur-2xl shadow-xl rounded-xl flex justify-center items-center sm:w-fit gap-2" onClick={contactNavigator}>
           <IoCallSharp />
           <h3 className="font-bold text-white">CONTACT US</h3>
         </div>
@@ -187,8 +227,8 @@ const Sidebar = () => {
         </div>
       </div>
     </div>
-     <div className=" absolute bottom-82 translate-x-[-120%] w-full flex sm:hidden justify-center items-center mt-2.5 scrollSide">
-        <span className="p-2 text-2xl rounded-full bg-black/60 text-[#ffff24] font-extrabold" onClick={close}>
+     <div className=" fixed top-80 translate-x-[-120%] w-full flex sm:hidden justify-center items-center mt-2.5 scrollSide z-50 cursor-pointer">
+        <span className="p-2 text-2xl rounded-full bg-black/60 text-[#ffff24] font-extrabold" onClick={close} ref={closeBar}>
           <MdOutlineClose />
         </span>
       </div>

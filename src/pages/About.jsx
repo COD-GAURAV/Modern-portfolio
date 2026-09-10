@@ -21,7 +21,11 @@ const About = () => {
   });
 
   return (
+    <>
     <div className=" h-screen w-full aboutSection relative bg-[#d6d0bf] p-5 sm:pl-75  about">
+    <div className="page2">
+
+    </div>
       <div className=" mb-5">
         <h3 className=" border-2 w-fit px-2 py-1 rounded-full sm:text-[12px]  text-black font-semibold">
           Start Small grow big
@@ -34,6 +38,7 @@ const About = () => {
           And My Goals
         </h1>
       </div>
+      
       <div className=" sm:text-[2.3vw]  mt-5 flex flex-wrap gap-2">
         <span className="aboutPara opacity-20 ">I</span>
         <span className="aboutPara opacity-20">am</span>
@@ -92,7 +97,7 @@ const About = () => {
         <span className="aboutPara opacity-20">my</span>
         <span className="aboutPara opacity-20">development</span>
         <span className="aboutPara opacity-20">skills.</span>
-
+ 
         <span className="aboutPara opacity-20">My</span>
         <span className="aboutPara opacity-20">goal</span>
         <span className="aboutPara opacity-20">is</span>
@@ -116,7 +121,9 @@ const About = () => {
         <span className="aboutPara opacity-20">positive</span>
         <span className="aboutPara opacity-20">impact.</span>
       </div>
+   
     </div>
+    </>
   );
 };
 
